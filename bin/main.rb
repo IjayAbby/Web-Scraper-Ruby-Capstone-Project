@@ -6,7 +6,7 @@
 
 require_relative '../lib/page_contents'
 require 'colorize'
-scraper = Scraper.new('https://www.coursera.org/search?query=free&index=prod_all_products_term_optimization')
+scraper = Scraper.new('https://www.coursera.org/search?query=free')
 scraper.start
 
 def prompt
@@ -33,14 +33,14 @@ def prompt
 end
 
 def info
-  @scraper = Scraper.new('https://www.coursera.org/search?query=free&index=prod_all_products_term_optimization')
+  @scraper = Scraper.new('https://www.coursera.org/search?query=free')
   @scraper.start
   @total = @scraper.instance_variable_get(:@total)
   @last_page = @scraper.instance_variable_get(:@last_page)
   puts " Free available #{@total}  courses in #{@last_page} pages"
   sleep(1.5)
   @page = 1
-  @collect = Pick.new(@total, @page)
+  @collect = Page.new(@total, @page)
 end
 
 def results

@@ -14,7 +14,10 @@ class Page < Scraper
 
   def start
     content_url = "https://www.coursera.org/courses?query=free#{page}"
-    content_doc = ::OpenURI.open_uri(content_url)
+    puts content_url
+    #content_doc = ::OpenURI.open_uri(content_url)
+    #content_doc = ::Watir::Browser.new
+    puts content_doc
     content_unparsed_page = content_doc.read
     content_parsed_page = Nokogiri::HTML(content_unparsed_page)
     content_parsed_page.css('div.card-content')
