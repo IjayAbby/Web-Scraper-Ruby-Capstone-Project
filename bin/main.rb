@@ -1,5 +1,7 @@
 # frozen_string_literal: true
+
 # rubocop:disable Metrics/AbcSize
+
 # rubocop:disable Metrics/MethodLength
 
 require_relative '../lib/page_contents'
@@ -38,7 +40,7 @@ def info
   puts " Free available #{@total}  courses in #{@last_page} pages"
   sleep(1.5)
   @page = 1
-  @collect = Loop.new(@total, @page)
+  @collect = Pick.new(@total, @page)
 end
 
 def results

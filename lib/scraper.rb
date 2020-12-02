@@ -1,16 +1,12 @@
 # frozen_string_literal: true
 
 require 'nokogiri'
-require 'byebug'
-require 'colorize'
-require 'rspec'
-require 'rubocop'
 require 'open-uri'
 
 class Scraper
   attr_reader :link
 
-  def init(link)
+  def initialize(link)
     @link = link
   end
 
@@ -29,6 +25,6 @@ class Scraper
     @page = 1
     per_page = courses_list.count
     @total = parsed_page.css('h2.rc-NumberOfResultsSection body-2-text').text.gsub(',', '').to_i
-    @last_page = (total.to_f / per_page.to_f).ceil
+    @last_page = (@total.to_f / per_page).ceil
   end
 end
