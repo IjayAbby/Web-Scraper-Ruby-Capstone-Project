@@ -13,18 +13,14 @@ class Page < Scraper
   end
 
   def start
-    content_url = "https://www.coursera.org/courses?query=free#{@page}"
-    #content_doc = ::OpenURI.open_uri(content_url)
+    content_url = "https://www.coursera.org/search?query=free&page=#{@page}&index=prod_all_products_term_optimization"
     content_doc = ::Watir::Browser.new
-    #puts content_doc
-    #content_doc.goto(content_url)
-    puts content_doc
-    #content_doc.element(css: 'li.ais-InfiniteHits-item').wait_until(&:present?)
-    #content_doc = content_doc.element(css: '#rendered-content')
-    #content_unparsed_page = content_doc.inner_html
-    puts content_unparsed_page
+    content_doc.goto(content_url)
+    content_doc.element(css: 'li.ais-InfiniteHits-item').wait_until(&:present?)
+    content_doc = content_doc.element(css: '#rendered-content')
+    content_unparsed_page = content_doc.inner_html
     content_parsed_page = Nokogiri::HTML(content_unparsed_page)
-    content_parsed_page.css('div.card-content')
+    content_parsed_page.css('li.ais-InfiniteHits-item')
   end
 
   def scraper
@@ -32,11 +28,12 @@ class Page < Scraper
     content_courses_list = start
     content_courses_list.each do |course_listing|
       courses = {
-        url: course_listing.css('div.card-content').css('a')[0].attributes['href'].value,
-        partner: course_listing.css('partner-logo-wrapper horizontal-box').css('span.partner-name').text,
-        course_title: course_listing.css('a.color-primary-text card-title headline-1-text').text,
-        enrollment: course_listing.css('div.rating-enroll-wrapper').css('span.enrollment-number').text,
-        level: course_listing.css('div.product-difficulty').css('span.difficult').text
+        url: "https://www.coursera.org/search?query=free#{course_listing.css('a.anchor-wrapper')[0].attributes['href'].value}",
+        course: course_listing.css('h2.color-primary-text').text,
+        partner: course_listing.css('span.partner-name').text,
+        product: course_listing.css('div.product-type-row').text,
+        enrollment: course_listing.css('div.rating-enroll-wrapper').text,
+        level: course_listing.css('span.difficulty').text
       }
       @list.push(courses)
     end

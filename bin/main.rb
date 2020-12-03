@@ -54,9 +54,9 @@ def results
     while i < list.count
       puts "Found Free available courses \n\n"
       puts " Partner: #{list[i][:partner]}".yellow.bold
-      puts " Course-title: #{list[i][:course_title]} \n Level: #{list[i][:level]}".orange.bold
+      puts " Course: #{list[i][:course]} \n Level: #{list[i][:level]}".red.bold
       puts " Enrollment: #{list[i][:enrollment]}".green.bold
-      puts " Course link: https://www.coursera.org/courses?query=free#{list[i][:url]}".cyan.bold
+      puts " Course link: #{list[i][:url]}".cyan.bold
       puts ''
       sleep(0.1)
       i += 1
