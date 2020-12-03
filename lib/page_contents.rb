@@ -13,12 +13,16 @@ class Page < Scraper
   end
 
   def start
-    content_url = "https://www.coursera.org/courses?query=free#{page}"
-    puts content_url
+    content_url = "https://www.coursera.org/courses?query=free#{@page}"
     #content_doc = ::OpenURI.open_uri(content_url)
-    #content_doc = ::Watir::Browser.new
+    content_doc = ::Watir::Browser.new
+    #puts content_doc
+    #content_doc.goto(content_url)
     puts content_doc
-    content_unparsed_page = content_doc.read
+    #content_doc.element(css: 'li.ais-InfiniteHits-item').wait_until(&:present?)
+    #content_doc = content_doc.element(css: '#rendered-content')
+    #content_unparsed_page = content_doc.inner_html
+    puts content_unparsed_page
     content_parsed_page = Nokogiri::HTML(content_unparsed_page)
     content_parsed_page.css('div.card-content')
   end
