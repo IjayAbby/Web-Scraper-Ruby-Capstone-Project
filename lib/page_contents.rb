@@ -28,7 +28,7 @@ class Page < Scraper
     content_courses_list = start
     content_courses_list.each do |course_listing|
       courses = {
-        url: "https://www.coursera.org/search?query=free#{course_listing.css('a.anchor-wrapper')[0].attributes['href'].value}",
+        url: "https://www.coursera.org/search?query=free#{course_listing.css('a.anchor-wrapper')[0].attributes['href'].value}", # rubocop:disable Layout/LineLength
         course: course_listing.css('h2.color-primary-text').text,
         partner: course_listing.css('span.partner-name').text,
         product: course_listing.css('div.product-type-row').text,
