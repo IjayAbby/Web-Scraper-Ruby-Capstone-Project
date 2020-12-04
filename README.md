@@ -95,8 +95,7 @@ Give a :star2: if you like this project! :blush:
 
 ## Acknowledgments
 
-- Thanks are owed to [Sarah Chamorro](https://www.linkedin.com/in/uryelah/), a FullTime TSE at Microverse.
-
+> - Thanks are owed to [Sarah Chamorro](https://www.linkedin.com/in/uryelah/), a FullTime TSE at Microverse.
 > - [Microverse](https://www.microverse.org/)
 > - [Rubocop](https://docs.rubocop.org/en/stable/)
 > - [Nokogiri](https://nokogiri.org/)

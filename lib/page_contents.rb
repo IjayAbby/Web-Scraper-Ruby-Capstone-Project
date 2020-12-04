@@ -1,13 +1,17 @@
 # frozen_string_literal: true
+
 # rubocop:disable Metrics/AbcSize
+
 # rubocop:disable Metrics/MethodLength
 
 require_relative '../lib/scraper'
 
+# Class Page < Scraper
 class Page < Scraper
   attr_reader :total, :page
 
   def initialize(total, page)
+    super
     @total = total
     @page = page
   end
