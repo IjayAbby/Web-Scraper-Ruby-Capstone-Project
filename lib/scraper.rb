@@ -3,6 +3,7 @@
 require 'nokogiri'
 require 'watir'
 
+# web scraping class
 class Scraper
   attr_reader :link
 

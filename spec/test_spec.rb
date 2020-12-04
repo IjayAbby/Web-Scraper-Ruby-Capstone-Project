@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative '../lib/scraper.rb'
+require_relative '../lib/scraper'
 
 describe 'Scraper' do
-  let(:scraper) { Scraper.new('https://www.coursera.org/search?query=free') } 
+  let(:scraper) { Scraper.new('https://www.coursera.org/search?query=free') }
 
   describe '#start' do
     it 'calls the start method in Scraper class with a true value' do

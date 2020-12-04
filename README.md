@@ -19,9 +19,11 @@ The purpose of this project is to develop a scraper tool to achieve web-scrappin
 
 - Watir stands for Web Application Testing In Ruby It facilitates the writing of automated tests by mimicing the behavior of a user interacting with a website.
 
-- Nokogiri is an HTML, XML, SAX, and Reader parser. Among Nokogiri's many features is the ability to search documents via XPath or CSS3 selectors. 
+- Nokogiri is an HTML, XML, SAX, and Reader parser. Among Nokogiri's many features is the ability to search documents via XPath or CSS3 selectors.
 
-In this project, I created a scraper which extracts free coursera courses from the [coursera.org](https://www.coursera.org/courses?query=free). 
+-Chromedriver-helper - Deprecated in favor of the 'webdrivers' gem as of 2019-03-31. See ``https://github.com/flavorjones/chromedriver-helper/issues/83``
+
+In this project, I created a scraper which extracts free coursera courses from the [coursera.org](https://www.coursera.org/courses?query=free).
 
 # Built With
 
@@ -95,12 +97,12 @@ Give a :star2: if you like this project! :blush:
 
 ## Acknowledgments
 
-- Thanks are owed to [Sarah Chamorro](https://www.linkedin.com/in/uryelah/), a FullTime TSE at Microverse.
-
+> - Thanks are owed to [Sarah Chamorro](https://www.linkedin.com/in/uryelah/), a FullTime TSE at Microverse.
 > - [Microverse](https://www.microverse.org/)
 > - [Rubocop](https://docs.rubocop.org/en/stable/)
 > - [Nokogiri](https://nokogiri.org/)
 > - [Watir](http://watir.com/)
+> - [Chromedriver-helper](https://github.com/titusfortner/webdrivers)
 
 # 📝 License
 
