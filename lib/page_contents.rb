@@ -5,8 +5,7 @@ class Page < Scraper
   attr_reader :total, :page
 
   def initialize(total, page)
-    # super(total)
-    @total = total
+    super(total)
     @page = page
   end
 

@@ -1,7 +1,7 @@
 require 'nokogiri'
-require 'open-uri'
 require 'watir'
 
+# web scraping class
 class Scraper
   attr_reader :link
 

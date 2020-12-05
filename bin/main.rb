@@ -13,7 +13,7 @@ def prompt
       @page += 1
       break
     elsif %w[n q].include?(input)
-      puts " Good luck on your career choice! \n Thank you for using my scraper!)))".yellow.bold
+      puts " Good luck on your career choice! \n Thank you for using my scraper!".yellow.bold
       puts ' I see a bright future ahead!'.green.bold
       exit
     else
