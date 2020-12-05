@@ -1,13 +1,11 @@
-# frozen_string_literal: true
-# rubocop:disable Metrics/AbcSize
-# rubocop:disable Metrics/MethodLength
-
 require_relative '../lib/scraper'
 
+# Class Page < Scraper
 class Page < Scraper
   attr_reader :total, :page
 
   def initialize(total, page)
+    # super(total)
     @total = total
     @page = page
   end
@@ -28,17 +26,15 @@ class Page < Scraper
     content_courses_list = start
     content_courses_list.each do |course_listing|
       courses = {
-        url: "https://www.coursera.org/search?query=free#{course_listing.css('a.anchor-wrapper')[0].attributes['href'].value}",
         course: course_listing.css('h2.color-primary-text').text,
         partner: course_listing.css('span.partner-name').text,
         product: course_listing.css('div.product-type-row').text,
         enrollment: course_listing.css('div.rating-enroll-wrapper').text,
         level: course_listing.css('span.difficulty').text
+        # url: "https://www.coursera.org/search?query=free#{course_listing.css('a.anchor-wrapper')[0].attributes['href'].value}"
       }
       @list.push(courses)
     end
     @page += 1
   end
 end
-# rubocop:enable Metrics/AbcSize
-# rubocop:enable Metrics/MethodLength
