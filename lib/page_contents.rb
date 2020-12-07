@@ -30,7 +30,6 @@ class Page < Scraper
         product: course_listing.css('div.product-type-row').text,
         enrollment: course_listing.css('div.rating-enroll-wrapper').text,
         level: course_listing.css('span.difficulty').text
-        # url: "https://www.coursera.org/search?query=free#{course_listing.css('a.anchor-wrapper')[0].attributes['href'].value}"
       }
       @list.push(courses)
     end

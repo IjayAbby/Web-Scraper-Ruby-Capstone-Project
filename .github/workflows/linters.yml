@@ -1,5 +1,3 @@
-require: rubocop-rspec
-
 name: Linters
 
 on: pull_request
@@ -19,10 +17,3 @@ jobs:
           [ -f .rubocop.yml ] || wget https://raw.githubusercontent.com/microverseinc/linters-config/master/ruby/.rubocop.yml
       - name: Rubocop Report
         run: rubocop --color
-        
-Metrics/BlockLength:
-  Exclude:
-  - '/spec/page_contents_spec.rb'
-
-   Metrics/BlockLength:
-   ExcludedMethods: ['Page', '#scraper']
