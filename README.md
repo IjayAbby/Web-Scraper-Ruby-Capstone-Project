@@ -57,18 +57,24 @@ git clone https://github.com/IjayAbby/Web-Scraper-Ruby-Capstone-Project
    1. Clone the project into your local machine using `git clone` command or download the zip file.
    2. Go into the project directory using `cd directory name` command.
    3. Install required gems by using `bundle install`
-   4. From the root directory type `bin/main.rb` command.
-   5. Run command `rspec <file name>` to test the various methods in the classes.
+   4. Install [webdrivers]((https://github.com/titusfortner/webdrivers)) and configure them according to your preffered browser.
+   5. From the root directory type `bin/main.rb` command.
+   6. Incase you experience this error ``(Selenium::WebDriver::Error::WebDriverError)`` it is because the project uses Selenium to render the page. To fix that here are the links:
+
+   - [Installing webdrivers](https://github.com/titusfortner/webdrivers)
+
+   - [Debugging](https://www.dwightwatson.com/posts/seleniumwebdrivererrorwebdrivererror)
+
+   7. Run command `rspec <file name>` to test the various methods in the classes.
 
 ## Running the scraper
 
-    When you run the project it will show you free courses available on the selected page, then prompts the user to see more or stop. If you want to see more results you can press the 'y' button or 'Enter/Return' key. If you want to stop or found a job that matches you, then press the 'n' or 'q' button. The scraping process will be stopped.
-    In job advertisements you can found information about job title, hiring company and its location, estimated salary per year and the link about job descriptions. If you interest in any job you can go to the job url and apply for the job.
-    In the free courses available you can be able to see Partner, Course, Level, Enrollment and the link to the course.
+    When you run the project it will show you free courses available on the selected page through your browser, then prompts the user to see more or stop. If you want to see more results you can press the 'y' button or 'Enter/Return' key. If you want to stop or found a job that matches you, then press the 'n' or 'q' button. The scraping process will be stopped.
+    In the free courses available you can be able to see Partner, Course, Level, Enrollment to the course.
 
 # Contributing
 
-:handshake: Contributions, issues and feature requests are welcome! 
+:handshake: Contributions, issues and feature requests are welcome!
 Start by:
 
     1. Forking the project
@@ -104,7 +110,7 @@ Give a :star2: if you like this project! :blush:
 > - [Rubocop](https://docs.rubocop.org/en/stable/)
 > - [Nokogiri](https://nokogiri.org/)
 > - [Watir](http://watir.com/)
-> - [Chromedriver-helper](https://github.com/titusfortner/webdrivers)
+> - [webdrivers](https://github.com/titusfortner/webdrivers)
 
 # 📝 License
 
