@@ -15,15 +15,17 @@ Web scraping is the process of automatically mining data or collecting informati
 
 The purpose of this project is to develop a scraper tool to achieve web-scrapping. This was achieved using Ruby, Open-uri, Watir and Nokogiri gem. The coursera page uses the production build of React which made the project more interesting to build.
 
-- Byebug debugger is used to check the values of the scrapped data from the page.
-
-- Watir stands for Web Application Testing In Ruby It facilitates the writing of automated tests by mimicing the behavior of a user interacting with a website.
+- Watir stands for Web Application Testing In Ruby It facilitates the writing of automated tests by  mimicing the behavior of a user interacting with a website.
 
 - Nokogiri is an HTML, XML, SAX, and Reader parser. Among Nokogiri's many features is the ability to search documents via XPath or CSS3 selectors.
 
--Chromedriver-helper - Deprecated in favor of the 'webdrivers' gem as of 2019-03-31. See ``https://github.com/flavorjones/chromedriver-helper/issues/83``
+- The above Ruby Gems can be sources from [Ruby Gems](https://rubygems.org/)
 
 In this project, I created a scraper which extracts free coursera courses from the [coursera.org](https://www.coursera.org/courses?query=free).
+
+## Preview
+
+![Screenshot from 2020-12-07 20-37-33](https://user-images.githubusercontent.com/43843720/101391176-051e6680-38d5-11eb-94ac-e110fa737c02.png)
 
 # Built With
 
@@ -89,7 +91,7 @@ Feel free to check the [issues page](https://github.com/IjayAbby/Web-Scraper-Rub
 - Twitter: [@Ijay_js](https://twitter.com/Ijay_js)
 - LinkedIn: [Abigael Nyangasi](https://www.linkedin.com/in/ijayabby4/)
 
-# Show your support!
+# Show your support
 
 Give a :star2: if you like this project! :blush:
 
