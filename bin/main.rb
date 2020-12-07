@@ -13,8 +13,8 @@ def prompt
       @page += 1
       break
     elsif %w[n q].include?(input)
-      puts " Good luck on your career choice! \n Thank you for using my scraper!".yellow.bold
-      puts ' I see a bright future ahead!'.green.bold
+      puts ' Good luck on your career choice! '.yellow.bold
+      puts ' Thank you for using my Scraper!'.green.bold
       exit
     else
       puts "Oops! Invalid character! \n\n".red.bold
@@ -31,8 +31,9 @@ def info
   @scraper.start
   @total = @scraper.instance_variable_get(:@total)
   @last_page = @scraper.instance_variable_get(:@last_page)
-  puts " Free available #{@total}  courses in #{@last_page} pages"
-  sleep(1.5)
+  puts " Free available #{@total}  courses in #{@last_page} pages".green.bold.underline
+  puts ' Loading....'.red.bold
+  sleep(0.5)
   @page = 1
   @collect = Page.new(@total, @page)
 end
@@ -48,7 +49,8 @@ def results
     while i < list.count
       puts "Found Free available courses \n\n"
       puts " Partner: #{list[i][:partner]}".yellow.bold
-      puts " Course: #{list[i][:course]} \n Level: #{list[i][:level]}".red.bold
+      puts " Course: #{list[i][:course]} ".red.bold
+      puts " Level: #{list[i][:level]} ".blue.bold
       puts " Enrollment: #{list[i][:enrollment]}".green.bold
       # puts " Course link: #{list[i][:url]}".cyan.bold
       puts ''
