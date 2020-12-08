@@ -49,6 +49,7 @@ git clone https://github.com/IjayAbby/Web-Scraper-Ruby-Capstone-Project
     Ruby installed on local machine
     Text editor (preferably: VSCode, Atom, Sublime)
     Git
+    Chrome Browser
 
 ## Setup
 
@@ -56,16 +57,20 @@ git clone https://github.com/IjayAbby/Web-Scraper-Ruby-Capstone-Project
 
    1. Clone the project into your local machine using `git clone` command or download the zip file.
    2. Go into the project directory using `cd directory name` command.
-   3. Install required gems by using `bundle install`
-   4. Install [webdrivers]((https://github.com/titusfortner/webdrivers)) and configure them according to your preffered browser.
-   5. From the root directory type `bin/main.rb` command.
-   6. Incase you experience this error ``(Selenium::WebDriver::Error::WebDriverError)`` it is because the project uses Selenium to render the page. To fix that here are the links:
+   3. Do ``git checkout feature_prerequisites`` to switch to the Development branch to Feature branch.
+   4. Install required gems by using  `gem install <gem name>` as listed in the [Gemfile](https://github.com/IjayAbby/Web-Scraper-Ruby-Capstone-Project/blob/feature_prerequisites/Gemfile).
+   
+    - gem install colorize
+    - gem install nokogiri
+    If it asks for permission use ``sudo gem install <gem name>``
+   5. From the root directory type `ruby bin/main.rb` command.
+   6. Incase you experience this error ``(Selenium::WebDriver::Error::WebDriverError)`` it is because the project uses ChromeDriver from Chrome Browser to render the page. To fix that here are the links:
 
-   - [Installing webdrivers](https://github.com/titusfortner/webdrivers)
+   - [Installing ChromeDriver](https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver) go to Quick Installation and find your preffered OS and install it then run the command on line 5.
 
-   - [Debugging](https://www.dwightwatson.com/posts/seleniumwebdrivererrorwebdrivererror)
+   7. Give the project sometime to load then you will be able to see the results in your terminal. Enjoy and play around with the options either to quit or load next page.
 
-   7. Run command `rspec <file name>` to test the various methods in the classes.
+   8. Run command `rspec <file name>`  to test the various methods in the classes.
 
 ## Running the scraper
 
